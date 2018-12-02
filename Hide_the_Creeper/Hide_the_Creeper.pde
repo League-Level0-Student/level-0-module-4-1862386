@@ -14,7 +14,7 @@ creeper=loadImage("Creeper.png");
 
 }
 void draw() {
-  image(creeper, 145, 96);
+  image(creeper, x, y);
  println("X:"+ mouseX + "Y: " + mouseY);
   if (mousePressed == true) {
      fill(255,0,0);
@@ -30,7 +30,8 @@ if(isNear(mouseX,x)== true) {
 }
 if((isNear(mouseX,x)== true)&& (isNear(mouseY,y)== true)&& mousePressed == true) {
  println("You found the creeper"); 
-  
+  x = x + 40;
+  y = y + 40;
 }
   
   
